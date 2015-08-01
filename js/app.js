@@ -9,9 +9,9 @@ app.config(function($routeProvider) {
         controller: "homeCtrl"
     })
 
-    .when('/categories', {
-        templateUrl: "templates/detailsTmpl.html",
-        controller: "detailsCtrl"
+    .when('/photos', {
+        templateUrl: "templates/photoTmpl.html",
+        controller: "photoCtrl"
     })
 
     .otherwise({
