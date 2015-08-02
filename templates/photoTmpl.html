@@ -1,11 +1,15 @@
-<h1> Test </h1>
-
-You have taken <strong> {{photoData.count}} </strong> photos in <strong> {{countryNumber}} </strong> countries
-
+<h1> You have taken <strong> {{photoData.count}} </strong> photos in <strong> {{countryNumber}} </strong> countries </h1>
 <hr>
 
-<div class="photo-container" ng-repeat="photo in photoData.items">
+<!-- <div class="row">
+    <div class="col-md-4" ng-repeat="photo in photoData.items">
+        <dir-photo photo="photo"> </dir-photo>
+    </div>
+</div> -->
 
-<dir-photo photo="photo"> </dir-photo>
 
+<div class="photo-container">
+    <div ng-repeat="photo in photoData.items">
+        <dir-photo photo="photo"> </dir-photo>
+    </div>
 </div>
