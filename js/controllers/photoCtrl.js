@@ -30,4 +30,5 @@ app.controller('photoCtrl', function($scope, photoService) {
 
     $scope.getCountryData();
 
+    
 });

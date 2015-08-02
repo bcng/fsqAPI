@@ -3,6 +3,10 @@
     padding: 20px auto;
 }
 
+.photo-header {
+    text-align: center;
+}
+
 .photo-container {
     margin: 0 auto;
     width: 70%;
@@ -15,3 +19,24 @@
     -webkit-flex-flow: row wrap;
     justify-content: space-around;
 }
+
+body {
+    background-color: #9F4140;
+}
+
+.home-body {
+    font-family: 'Lato', serif;
+    font-size: 60px;
+    color: white;
+}
+
+.home-body-emph {
+	color: black;
+	font-weight: bold;
+}
+
+.profile-img {
+	margin-left: auto;
+	margin-right: auto;
+}
+
