@@ -1,5 +1,6 @@
 app.controller('photoCtrl', function($scope, photoService) {
 
+// this function will call the photoService function and assign data to the scope
     $scope.getPhotos = function() {
         photoService.getPhotoData().then(function(response) {
             $scope.photoData = response;
@@ -8,6 +9,7 @@ app.controller('photoCtrl', function($scope, photoService) {
 
     $scope.getPhotos();
 
+// this function will call the photoService function and assign data to the scope
     $scope.getCountryData = function() {
         photoService.getPhotoData().then(function(response) {
             var countryArr = [],
