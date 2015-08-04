@@ -14,6 +14,11 @@ app.config(function($routeProvider) {
         controller: "photoCtrl"
     })
 
+    .when('/maps', {
+        templateUrl: "templates/mapTmpl.html",
+        controller: "mapCtrl"
+    })
+
     .otherwise({
         redirectTo: '/'
     });
