@@ -1,10 +1,29 @@
 .nav-pills li {
     font-size: 25px;
+    font-family: 'Lato', serif;
+    font-weight: 700;
 }
 
 .page-header {
     text-align: center;
     color: white;
+}
+
+.page-subheader {
+    text-align: center;
+}
+
+#link {
+    text-align: center;
+}
+
+#link a {
+    color: black;
+}
+
+input[type="text"] {
+    display: block;
+    margin: 0 auto;
 }
 
 .photo-container {
@@ -21,13 +40,15 @@
 }
 
 body {
-    background-color: #213FDD;
+    background-color: #4DACBB;
+    padding-top: 70px;
 }
 
-.home-body {
+.home-text {
     font-family: 'Lato', serif;
-    font-size: 60px;
+    font-weight: 700;
     color: white;
+    text-align: center;
 }
 
 .home-body-emph {

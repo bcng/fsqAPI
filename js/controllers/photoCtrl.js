@@ -10,7 +10,6 @@ app.controller('photoCtrl', function($scope, photoService) {
                 dupObj = {},
                 newArr = [];
             var photoArr = response.items;
-            console.log(photoArr);
             for (var i = 0; i < photoArr.length; i++) {
                 countryArr.push(photoArr[i].venue.location.country);
             }

@@ -10,13 +10,12 @@
                  element.css({
                      'opacity': '0.3'
                  }).on('mouseleave', function(){
-                 	element.css({
-                 		'opacity': '1.0'
-                 	})
+                     element.css({
+                         'opacity': '1.0'
+                     })
                  })
              })
+             
          }
      }
  })
-
-

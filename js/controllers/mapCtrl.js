@@ -21,7 +21,7 @@ app.controller('mapCtrl', function($scope, photoService) {
                             'marker-size': 'large'
                         })
                     })
-                    .bindPopup('<strong><a href="https://foursquare.com/v/' + venueId + '">' +
+                    .bindPopup('<strong><a target="_blank" href="https://foursquare.com/v/' + venueId + '">' +
                         venue + '</a></strong>')
                     .addTo(foursquarePlaces);
             }
