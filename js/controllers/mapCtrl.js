@@ -11,16 +11,17 @@ app.controller('mapCtrl', function($scope, photoService) {
             var foursquarePlaces = L.layerGroup().addTo(map);
             var photoObjs = response.items;
             for (var i = 0; i < response.items.length; i++) {
+                var venueId = photoObjs[i].venue.id;
                 var venue = photoObjs[i].venue.name;
                 var latlng = L.latLng(photoObjs[i].venue.location.lat, photoObjs[i].venue.location.lng);
                 var marker = L.marker(latlng, {
                         icon: L.mapbox.marker.icon({
                             'marker-color': '#BE9A6B',
-                            'marker-symbol': 'cafe',
+                            'marker-symbol': 'star',
                             'marker-size': 'large'
                         })
                     })
-                    .bindPopup('<strong><a href="https://foursquare.com/v/' + venue.id + '">' +
+                    .bindPopup('<strong><a href="https://foursquare.com/v/' + venueId + '">' +
                         venue + '</a></strong>')
                     .addTo(foursquarePlaces);
             }

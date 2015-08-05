@@ -1,17 +1,11 @@
 app.controller('photoCtrl', function($scope, photoService) {
 
-// this function will call the photoService function and assign data to the scope
+// this first part of the below function will retrieve photoData
     $scope.getPhotos = function() {
         photoService.getPhotoData().then(function(response) {
             $scope.photoData = response;
-        })
-    }
-
-    $scope.getPhotos();
-
-// this function will call the photoService function and assign data to the scope
-    $scope.getCountryData = function() {
-        photoService.getPhotoData().then(function(response) {
+            
+            //this part of the function will parse the photoData data and calculate number of unique countries user has taken pictures in
             var countryArr = [],
                 dupObj = {},
                 newArr = [];
@@ -30,7 +24,6 @@ app.controller('photoCtrl', function($scope, photoService) {
         })
     }
 
-    $scope.getCountryData();
-
+    $scope.getPhotos();
     
 });

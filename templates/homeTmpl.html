@@ -1,5 +1,14 @@
 <!-- User profile picture -->
-<img src={{allData.photo.prefix}}200x200{{allData.photo.suffix}} class="img-circle img-responsive profile-img"> <br> 
+<img src={{allData.photo.prefix}}200x200{{allData.photo.suffix}} class="img-circle img-responsive profile-img">
+<br>
+<!-- Home page body paragraph -->
+<div class="home-body"> Hello, <span class="home-body-emph">{{allData.firstName}} </span>! It looks like you hail from <span class="home-body-emph">{{allData.homeCity}}</span>. That's awesome! Now, let's take a look at your stats. Wow! Since joining Foursquare, you have left <span class="home-body-emph">{{allData.tips.count}} </span> tips, created <span class="home-body-emph">{{allData.lists.count}} </span> lists, checked in <span class="home-body-emph">{{allData.checkins.count}}</span> times, and received <span class="home-body-emph">{{allData.badges.count}}</span> badges. That's a lot of action! You've also befriended <span class="home-body-emph">{{allData.friends.count}} </span> others and have taken <span class="home-body-emph"><a href="/#/photos">{{allData.photos.count}} photos.</a></span> You've sure been busy.</div>
+
+<hr>
 
 <!-- Home page body paragraph -->
-<div class="home-body"> Hello, <span class="home-body-emph">{{allData.firstName}} </span>!  It looks like you hail from <span class="home-body-emph">{{allData.homeCity}}</span>.  That's awesome!  Now, let's take a look at your stats. Wow! Since joining Foursquare, you have left <span class="home-body-emph">{{allData.tips.count}} </span> tips, created <span class="home-body-emph">{{allData.lists.count}} </span> lists, checked in <span class="home-body-emph">{{allData.checkins.count}}</span> times, and received <span class="home-body-emph">{{allData.badges.count}}</span> badges.  That's a lot of action!  You've also befriended <span class="home-body-emph">{{allData.friends.count}} </span> others and have taken <span class="home-body-emph"><a href="/#/photos">{{allData.photos.count}} photos.</a></span> You've sure been busy.</div>
+<h1> Your Recent Photos </h1>
+<div ng-repeat="photo in photoData.items | limitTo: 3">
+    <dir-photo photo="photo" photo-selected="selectedPhoto"> </dir-photo>
+</div>
+<h4><a href="/#/photos"> View All <a></h4>

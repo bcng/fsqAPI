@@ -1,10 +1,13 @@
 <!-- Below content is pulling from two different data objects, photoData and countryNumber -->
-<h1 class="photo-header"> You have taken <span class="home-body-emph"> {{photoData.count}} </span>photos in <span class="home-body-emph"> {{countryNumber}} </span> countries </h1>
-<hr>
+<h1 class="page-header"> You have taken <span class="home-body-emph"> {{photoData.count}} </span>photos in <span class="home-body-emph"> {{countryNumber}} </span> countries </h1>
+
+
+<input type="text" ng-model="searchText" placeholder = "Search by country"></input>
+
 
 <!-- Below content comes from photoData object and is pulled in via ng-repeat. Photo container uses flexbox to organize content, across multiple media queries.  Each photo is a directive, to create an isolate scope and a hover css effect -->
 <div class="photo-container">
-    <div ng-repeat="photo in photoData.items">
+    <div ng-repeat="photo in photoData.items | filter: searchText">
         <dir-photo photo="photo" photo-selected="selectedPhoto"> </dir-photo>
     </div>
 </div>
