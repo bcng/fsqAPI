@@ -16,6 +16,6 @@
 <!-- Below content comes from photoData object and is pulled in via ng-repeat. Photo container uses flexbox to organize content, across multiple media queries.  Each photo is a directive, to create an isolate scope and a hover css effect -->
 <div class="photo-container">
     <div ng-repeat="photo in photoData.items | filter: searchText">
-        <dir-photo photo="photo" photo-selected="selectedPhoto"> </dir-photo>
+        <dir-photo photo="photo"> </dir-photo>
     </div>
 </div>
